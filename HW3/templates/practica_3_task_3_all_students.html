@@ -1,0 +1,31 @@
+{% extends 'practica_3_task_1_base.html' %}
+
+{% block content %}
+
+    <h2>Информация о всех студентах:</h2>
+    {% for student in students %}
+            <p>
+                student.id =
+                {{ student.id }}
+                <br>
+                student.name =
+                {{ student.name }}
+                <br>
+                student.surname =
+                {{ student.surname }}
+                <br>
+                student.group =
+                {{ student.group }}
+                <br>
+                student.gender =
+                {{ student.email }}
+                <br>
+                {% for evaluation in student.information_about_ratings %}
+                    Предмет: {{ evaluation.item_name }} ,
+                    Оценка: {{ evaluation.estimation }} ;
+                    <br>
+                {% endfor %}
+            </p>
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'practica_3_task_1_base.html' %}
+
+{% block content %}
+    <h2>Информация о всех книгах:</h2>
+    {% for book in books %}
+            <p>
+                book.id =
+                {{ book.id }}
+                <br>
+                book.title =
+                {{ book.title }}
+                <br>
+                book.year_publication =
+                {{ book.year_publication }}
+                <br>
+                book.number_instances =
+                {{ book.number_instances }}
+                <br>
+                book.author_id =
+                {{ book.author_id }}
+                <br>
+                book.information_about_authors.name =
+                {{ book.information_about_authors.name }}
+                <br>
+                book.information_about_authors.surname =
+                {{ book.information_about_authors.surname }}
+            </p>
+    {% endfor %}
+
+    <h2>Информация о книге/книгах написанных автором с id=2:</h2>
+    {% for book in author_two.books %}
+            <p>
+                book.id =
+                {{ book.id }}
+                <br>
+                book.title =
+                {{ book.title }}
+                <br>
+                book.year_publication =
+                {{ book.year_publication }}
+                <br>
+                book.number_instances =
+                {{ book.number_instances }}
+                <br>
+                book.author_id =
+                {{ book.author_id }}
+                <br>
+                book.information_about_authors.name =
+                {{ book.information_about_authors.name }}
+                <br>
+                book.information_about_authors.surname =
+                {{ book.information_about_authors.surname }}
+            </p>
+    {% endfor %}
+
+{% endblock %}
